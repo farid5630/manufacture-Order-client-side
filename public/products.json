@@ -1,0 +1,58 @@
+[
+  {
+    "id": "6277498ab05036d21a1166c6",
+    "name": "Automatic Document Feeder for Toshiba MR-3031C-B RADF ",
+    "description": "Toshiba MR-3031C-B RADF offers A5-A3, 35-157 gsm, and mime plain paper facility. This document feeder works with Toshiba e-Studio 2010AC, 3515AC, 2518A, 3018A, 4518A, 5018A, 2515AC photocopiers.",
+    "availabalQuantity": 750,
+    "minimumOrder": 20,
+    "price": 50000,
+    "img": "https://i.ibb.co/9GhTvSN/Radf.jpg"
+  },
+  {
+    "id": "6277498aeece7715ff7a213a",
+    "name": "Toshiba HR-5008A-U Original Fuser Roller",
+    "description": "Toshiba HR-5008A-U fuser roller is designed to work with Toshiba e-studio photocopiers. It uses monochrome laser printing technology. The total lifetime of this Toshiba HR-5008A-U is ±70000 to 85000 copies.",
+    "availabalQuantity": 840,
+    "minimumOrder": 50,
+    "price": 5000,
+    "img": "https://i.ibb.co/5MRL8hH/Fuser-Ruller-1.jpg"
+  },
+
+  {
+    "id": "6277498a114dc218782067cf",
+    "name": "Toshiba Original Gear Set for Developer Unit",
+    "description": "This Toshiba genuine photocopier developer unit gear set has a copy life of nearly 115000 pieces. It is compatible with Toshiba e-studio 2303A / 2309A / 2303AM / 2303AM / 2523A / 2523AD / 2523AD / 2323AM / 2823AM / 2829A / 2329AM.",
+    "availabalQuantity": 700,
+    "minimumOrder": 120,
+    "price": 700,
+    "img": "https://i.ibb.co/LpKpmbV/gear-set.jpg"
+  },
+
+  {
+    "id": "6277498ad9b87457d7c3e3b2",
+    "name": "Original Developer Unit for Toshiba Photocopier",
+    "description": "This Toshiba genuine developer unit is designed to ensure the best possible mechanic output. It supports Toshiba e-studio 2303A, 2309A, 2303AM, 2523A, 2523AD, 2323AM, 2823AM, 2829A, 2329AM.",
+    "availabalQuantity": 520,
+    "minimumOrder": 70,
+    "price": 5500,
+    "img": "https://i.ibb.co/tPk2kdn/unit-copyer.jpg"
+  },
+  {
+    "id": "6277498ae7af46d734efce70",
+    "name": "Toshiba OD-2505 Original Drum",
+    "description": "Toshiba OD-2505 Original Drum is used for Toshiba e-studio 2303A, 2309A, 2303AM, 2523A, 2523AD, 2323AM, 2823AM, 2829A, 2329AM.",
+    "availabalQuantity": 630,
+    "minimumOrder": 65,
+    "price": 3500,
+    "img": "https://i.ibb.co/r3sPscY/dhum.jpg"
+  },
+  {
+    "id": "6277498a5e2cb5c552642e00",
+    "name": "Toshiba D-5070 Original Black Developer",
+    "description": "The Toshiba D-5070 black developer is expertly developed to ensure that your Toshiba laser printer produces the greatest quality outputs. The D-5070 is an excellent alternative for your Toshiba printer's developer. It has a copy life of 100000 pages and is 500gm total weight.",
+    "availabalQuantity": 900,
+    "minimumOrder": 80,
+    "price": 6000,
+    "img": "https://i.ibb.co/mJ9jBcR/black.jpg"
+  }
+]

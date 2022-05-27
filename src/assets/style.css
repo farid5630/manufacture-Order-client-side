@@ -1,0 +1,47 @@
+
+
+
+.after-custom::after {
+    content: '';
+    background: #26c4e0;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto 5px;
+}
+.tesimonial{
+    padding: 70px 10px 10px;
+    background-color: #efefef;
+}
+.profile img{
+    margin-top: -60px;
+    position: absolute;
+   /* left: calc(50% -60px); */
+    border: 10px solid white;
+    /* z-index: 999; */
+    
+}
+.user{     
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+/* blockquote::before {
+    content: '\93';
+    font-size: 50px;
+    position: relative;
+    color: #ff9800;
+    line-height: 20px;
+    bottom: -15px;
+    right: 5px;
+}
+blockquote::after {
+    content: '\94';
+    font-size: 50px;
+    position: relative;
+    color: #ff9800;
+    line-height: 20px;
+    bottom: -15px;
+    right: 5px;
+} */
