@@ -7,9 +7,9 @@ const business = [
     number: 32,
     img: "https://i.ibb.co/4pRyk89/image.png",
   },
-  { id: 1, name: "Complete Project", number: "540+", img: "url" },
-  { id: 1, name: "Happy Calients", number: "380+", img: "url" },
-  { id: 1, name: "Feedbacks", number: "420+", img: "url" },
+  { id: 2, name: "Complete Project", number: "540+", img: "url" },
+  { id: 3, name: "Happy Calients", number: "380+", img: "url" },
+  { id: 4, name: "Feedbacks", number: "420+", img: "url" },
 ];
 
 const BusinessSummary = () => {

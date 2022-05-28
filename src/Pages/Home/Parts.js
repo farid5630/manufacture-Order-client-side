@@ -14,7 +14,7 @@ const Parts = () => {
       <h3 className="text-cyan-500 text-4xl font-bold text-center after-custom my-8 ">Photocopy Machine Parts Price in Bangladesh</h3>
       <div className="">
         {parts.slice(0,6).map((part) => (
-          <Part key={part.id} part={part}></Part>
+          <Part key={part._id} part={part}></Part>
         ))}
       </div>
     </div>

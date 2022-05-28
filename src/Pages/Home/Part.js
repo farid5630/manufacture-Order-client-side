@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const Part = ({ part }) => {
-    const { name, img, description, price, availabalQuantity, minimumOrder } =
-      part;
+    const { _id, name, img, description, price, availabalQuantity, minimumOrder } =
+    part;
+  const navigate = useNavigate()
+  const navigateToOrders = id => {
+    navigate(`/order/${id}`)
+  }
     return (
       <div className="">
         <div className="mx-auto  shadow-xl mb-9">
@@ -36,8 +42,7 @@ const Part = ({ part }) => {
                   </div>
                   <div className="md:w-3/12">
                     <button
-                      // to=`/manageStock/${}`
-
+                      onClick={() => navigateToOrders(_id)}
                       className="btn btn-success"
                     >
                       Order Now
@@ -54,12 +59,12 @@ const Part = ({ part }) => {
       //       <img
       //         src={img}
       //         alt="fotocopyr parts"
-      //         class="rounded-xl "
+      //         className="rounded-xl "
       //       style={{ height: "250px", objectFit: "cover" }}
       //       />
       //     </figure>
       //     <div className="card-body items-center text-center">
-      //       <h2 class="card-title">{name}</h2>
+      //       <h2 className="card-title">{name}</h2>
       //       <p>{description}</p>
       //       <div className="card-actions">
       //         <button className="btn btn-primary">Buy Now</button>

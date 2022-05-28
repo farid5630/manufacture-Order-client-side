@@ -8,32 +8,21 @@ const Dashboard = () => {
   const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
   return (
-    <div class="drawer drawer-mobile">
-      <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content">
-        <h2 className="text-2xl font-bold ml-6 mt-6 text-purple-500">
+    <div className="drawer drawer-mobile">
+      <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        <h2 className="text-3xl font-bold ml-6 mt-6 text-cyan-500 text-center">
           Welcome to your Dashboard
         </h2>
         <Outlet></Outlet>
       </div>
-      <div class="drawer-side">
-        <label for="dashboard-sidebar" class="drawer-overlay"></label>
-        <ul class="menu pl-2 pt-4 overflow-y-auto w-50  bg-slate-500 rounded text-white">
+      <div className="drawer-side">
+        <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
+        <ul className="menu pl-2 pt-4 overflow-y-auto w-50  bg-slate-500 rounded text-white">
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/dashboard/profile">My Profile</Link>
-          </li>
-
-          <li>
-            <Link to="/dashboard/orders">My Orders</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/review">Add a Review</Link>
-          </li>
-
-          {user && (
+          {admin ? (
             <>
               <li>
                 <Link to="/dashboard/manageOrders">Manage All Orders</Link>
@@ -46,6 +35,19 @@ const Dashboard = () => {
               </li>
               <li>
                 <Link to="/dashboard/manageProduct">Manage Product</Link>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/dashboard/profile">My Profile</Link>
+              </li>
+
+              <li>
+                <Link to="/dashboard/orders">My Orders</Link>
+              </li>
+              <li>
+                <Link to="/dashboard/review">Add a Review</Link>
               </li>
             </>
           )}

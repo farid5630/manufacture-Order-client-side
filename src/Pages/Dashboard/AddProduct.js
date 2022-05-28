@@ -89,7 +89,7 @@ const AddProduct = () => {
           <label className="label">
             <span className="label-text">Description</span>
           </label>
-          {/* <textarea name="" id="" cols="30" rows="10"></textarea> */}
+
           <textarea
             type="text"
             placeholder="Product Description"

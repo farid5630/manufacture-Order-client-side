@@ -14,7 +14,7 @@ const ContactUs = () => {
           <div className="contactInfo">
             <div className="box">
               <div className="icon">
-                <i class="fa-solid fa-location-dot"></i>
+                <i className="fa-solid fa-location-dot"></i>
               </div>
               <div className="text">
                 <h3>Address</h3>

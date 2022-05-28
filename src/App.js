@@ -1,6 +1,5 @@
 import './assets/style.css';
 import { Route, Routes } from 'react-router-dom';
-import Header from './Pages/Shared/Header';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register';
@@ -15,15 +14,17 @@ import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import Order from './Pages/Order/Order';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
     <div>
       
-      <Header></Header>
+      {/* <Header></Header> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/home" element={<Home />}></Route>
+        <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route
@@ -34,18 +35,11 @@ function App() {
             </RequireAuth>
           }
         ></Route>
-        <Route
-          path="/dashboard"
-          element={
-            <RequireAuth>
-              <Dashboard />
-            </RequireAuth>
-          }
-        >
+        <Route path="/dashboard" element={<RequireAuth><Dashboard /></RequireAuth>}>
           <Route path="/dashboard/orders" element={<MyOrders />}></Route>
           <Route path="/dashboard/review" element={<AddReview />}></Route>
           <Route path="/dashboard/profile" element={<MyProfile />}></Route>
-          <Route path="/dashboard/addProduct" element={<AddProduct />}></Route>
+          
           <Route
             path="/dashboard/manageOrders"
             element={
@@ -55,7 +49,7 @@ function App() {
             }
           ></Route>
           {/* <Route path="/dashboard/addProduct" element={<AddProduct />}></Route> */}
-          {/* <Route path='dashboard/addProduct' element={<RequireAdmin><AddProduct/></RequireAdmin>}></Route> */}
+          <Route path='/dashboard/addProduct' element={<RequireAdmin><AddProduct/></RequireAdmin>}></Route>
           <Route
             path="/dashboard/makeAdmin"
             element={
