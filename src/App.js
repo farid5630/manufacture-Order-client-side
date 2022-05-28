@@ -15,12 +15,14 @@ import ManageProduct from './Pages/Dashboard/ManageProduct';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import Order from './Pages/Order/Order';
 import Blogs from './Pages/Blogs/Blogs';
+import Header from './Pages/Shared/Header';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div>
       
-      {/* <Header></Header> */}
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/home" element={<Home />}></Route>
@@ -68,6 +70,7 @@ function App() {
           ></Route>
         </Route>
       </Routes>
+      <ToastContainer/>
     </div>
   );
 }

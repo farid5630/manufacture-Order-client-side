@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../Shared/Header';
+
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import ContactUs from './ContactUs';
@@ -9,7 +9,7 @@ import Reviews from './Reviews';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
+           
             <Banner></Banner>
             <Parts></Parts>
             <BusinessSummary></BusinessSummary>

@@ -12,7 +12,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/order?email=${user.email}`, {
+      fetch(`http://localhost:5000/myorder?email=${user.email}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -35,7 +35,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const confirm = window.confirm("are you sure ");
     if (confirm) {
-      const url = `http://localhost:5000/order/${id}`;
+      const url = `http://localhost:5000/myorder/${id}`;
       fetch(url, {
         method: "DELETE",
       }).then((data) => {

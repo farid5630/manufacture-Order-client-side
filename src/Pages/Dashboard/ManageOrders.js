@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const ManageOrders = () => {
+
     return (
-        <div>
-            <h2>This is Manage Product </h2>
-        </div>
+      <div>
+        <h3>This is all Orders</h3>
+      </div>
     );
 };
 
