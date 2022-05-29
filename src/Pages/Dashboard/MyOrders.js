@@ -38,18 +38,19 @@ const MyOrders = () => {
       const url = `http://localhost:5000/myorder/${id}`;
       fetch(url, {
         method: "DELETE",
-      }).then((data) => {
-        console.log(data);
+      }).then((data) => {        
         toast("Delete Successfully");
         const remaining = myOrders.filter((myOrder) => myOrder._id !== id);
         setMyOrders(remaining);
       });
     }
   };
-
+  const pamentMethod = () => {
+  alert('payment method is comeing')
+}
   return (
     <div>
-      <h1>My all Orders</h1>
+      <h1 className="text-4xl text-gray-500 text-center font-bold after-custom">My All Orders</h1>
       <div className="overflow-x-auto">
         <table className="table table-zebra w-full">
           <thead>
@@ -59,6 +60,8 @@ const MyOrders = () => {
               <th>Image</th>
               <th>Order Quantity</th>
               <th>Total Price</th>
+              <th>Status</th>
+              <th>Payment</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -66,7 +69,7 @@ const MyOrders = () => {
             {myOrders.map((myOrder, index) => (
               <tr key={myOrder._id}>
                 <td>{index + 1}</td>
-                <th>{myOrder.name}</th>
+                <th>{myOrder.name.slice(0,18)}...</th>
                 <td>
                   <img
                     src={myOrder.img}
@@ -76,11 +79,15 @@ const MyOrders = () => {
                 </td>
                 <td>{myOrder.quantity} PCS</td>
                 <td>{myOrder.price}</td>
+                <td>{myOrder.status}</td>
+                <td className=" btn btn-success mt-2" onClick={pamentMethod}>{myOrder.status === "unpaid" ? "Pay" : " "}</td>
+                
                 <td>
-                  <i
-                    className="fa fa-trash text-red-500 text-center text-2xl"
-                    onClick={() => handleDelete(myOrder._id)}
-                  ></i>
+                  {myOrder.status === "unpaid" && <i 
+                    className='fa fa-trash text-red-500 text-center text-2xl'
+                     onClick={() => handleDelete(myOrder._id)}
+                  ></i> }
+                  
                 </td>
               </tr>
             ))}

@@ -3,7 +3,9 @@ import React from 'react';
 const MyProfile = () => {
     return (
         <div>
-            <h3 className='text-5xl mt-15 text-center'>This is my profile page</h3>
+            <h3 className='text-4xl mt-15 text-center text-gray-500 font-bold after-custom'>Edit Profile </h3>
+
+            <p className='text-center text-2xl  mt-12'>Profile Editable developing.........</p>
         </div>
     );
 };

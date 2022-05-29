@@ -22,6 +22,9 @@ const Dashboard = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
+          <li>
+            <Link to="/dashboard/profile">My Profile</Link>
+          </li>
           {admin ? (
             <>
               <li>
@@ -39,10 +42,6 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-              <li>
-                <Link to="/dashboard/profile">My Profile</Link>
-              </li>
-
               <li>
                 <Link to="/dashboard/orders">My Orders</Link>
               </li>

@@ -51,7 +51,7 @@ const AddReview = () => {
       };
     return (
       <div className='flex flex-col items-center justify-center '>
-        <h2 className='text-4xl text-green-500'>Please Your Review</h2>
+        <h2 className='text-4xl text-gray-500 font-bold after-custom '>Please Your Review</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="form-control w-full max-w-xs">
             <label className="label">

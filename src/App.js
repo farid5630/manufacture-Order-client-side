@@ -17,6 +17,7 @@ import Order from './Pages/Order/Order';
 import Blogs from './Pages/Blogs/Blogs';
 import Header from './Pages/Shared/Header';
 import { ToastContainer } from 'react-toastify';
+import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
@@ -70,7 +71,8 @@ function App() {
           ></Route>
         </Route>
       </Routes>
-      <ToastContainer/>
+      <ToastContainer />
+      <Footer></Footer>
     </div>
   );
 }
