@@ -10,7 +10,7 @@ const MakeAdmin = () => {
       isLoading,
       refetch,
     } = useQuery("users", () =>
-      fetch("http://localhost:5000/user", {
+      fetch("https://fast-temple-50632.herokuapp.com/user", {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -22,7 +22,7 @@ const MakeAdmin = () => {
     }
     
     const makeAdmin = (email) => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://fast-temple-50632.herokuapp.com/user/admin/${email}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

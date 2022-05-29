@@ -1,6 +1,6 @@
-import React from 'react';
-import { useQuery } from 'react-query';
-import Loading from '../Shared/Loading';
+import React from "react";
+import { useQuery } from "react-query";
+import Loading from "../Shared/Loading";
 
 const Reviews = () => {
   const {
@@ -8,91 +8,39 @@ const Reviews = () => {
     isLoading,
     refetch,
   } = useQuery("reviews", () =>
-    fetch("http://localhost:5000/review", {
-      
-    }).then((res) => res.json())
-    );
-  
+    fetch("https://fast-temple-50632.herokuapp.com/review", {}).then((res) => res.json())
+  );
 
   if (isLoading) {
     return <Loading></Loading>;
   }
-  
-    return (
-      <div className="max-w-7xl mx-auto px-12">
-        <h4 className="after-custom text-center mt-16 uppercase text-4xl text-cyan-500">
-          testimonials
-        </h4>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-20">
-          {reviews?.slice(0, 6).map((review) => (
-            <div key={review._id} className="flex flex-col items-center">
-              <div className="profile">
-                <img
-                  className="user"
-                  src={review.img}
-                  alt="This is clients imag"
-                />
-              </div>
-              <div className="text-center tesimonial rounded ">
-                <blockquote>{review.description}</blockquote>
-                <p>{review.rating}</p>
-                <h3 className="text-2xl text-cyan-500 font-bold">
-                  {review.name}
-                </h3>
-              </div>
-            </div>
-          ))}
-          <div className="flex flex-col items-center">
-            <div className="profile">
-              {/* <img
-                style={{
-                  width: "120px",
-                  height: "120px",
-                  position: "absolute",
-                }}
-                className="rounded-full"
-                src="https://i.ibb.co/4pRyk89/image.png"
-                alt="This is clients imag"
-              /> */}
-              <img
-                className="user"
-                src="https://i.ibb.co/4pRyk89/image.png"
-                alt="This is clients imag"
-              />
-            </div>
-            <div className="text-center tesimonial rounded ">
-              <blockquote>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Voluptate, tenetur dolores exercitationem sequi modi est
-                accusantium vero dicta fugit. Nisi suscipit, architecto quaerat
-                a autem alias fuga temporibus quidem eveniet eius accusantium
-                animi accusamus voluptate?
-              </blockquote>
-              <h2 className="text-2xl text-cyan-500 font-bold">
-                Md Foridul Islam
-              </h2>
+
+  return (
+    <div className="max-w-7xl mx-auto px-12">
+      <h4 className="after-custom text-center mt-16 uppercase text-4xl text-cyan-500">
+        testimonials
+      </h4>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
+        {reviews?.slice(0, 4).map((review) => (
+          <div key={review._id} className="card card-side bg-gray-200 shadow-xl">
+            <figure>
+              <img className="pl-3" src={review.img} alt="Client Imag" style={{ width:'140px', height:'150px', borderRadius:'50%' }} />
+            </figure>
+            <div className="card-body">
+              <p>{review.description}</p>
+              <p className="text-2xl text-yellow-500 font-bold">
+                {review.rating}
+              </p>
+              <h2 className="card-title text-cyan-500">{review.name}</h2>
+
+              
             </div>
           </div>
-          {/* <div className="flex flex-col items-center">
-            <div>
-              <img src="" alt="This is clients imag" />
-            </div>
-            <div>
-              <h3>content</h3>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div>
-              <img src="" alt="This is clients imag" />
-            </div>
-            <div>
-              <h3>content</h3>
-              <h3>name</h3>
-            </div>
-          </div> */}
-        </div>
+        ))}
+       
       </div>
-    );
+    </div>
+  );
 };
 
 export default Reviews;

@@ -18,6 +18,8 @@ import Blogs from './Pages/Blogs/Blogs';
 import Header from './Pages/Shared/Header';
 import { ToastContainer } from 'react-toastify';
 import Footer from './Pages/Shared/Footer';
+import Contact from './Pages/Contact/Contact';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route
           path="/order/:id"
@@ -70,6 +73,7 @@ function App() {
             }
           ></Route>
         </Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
       <Footer></Footer>

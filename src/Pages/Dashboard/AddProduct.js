@@ -37,7 +37,7 @@ const AddProduct = () => {
           console.log(part);
             
           // send to your database
-          fetch("http://localhost:5000/parts", {
+          fetch("https://fast-temple-50632.herokuapp.com/parts", {
             method: "POST",
             headers: {
               "content-type": "application/json",

@@ -30,7 +30,7 @@ const AddReview = () => {
                  
 
                 // send to your database
-                fetch("http://localhost:5000/review", {
+                fetch("https://fast-temple-50632.herokuapp.com/review", {
                   method: "POST",
                   headers: {
                     "content-type": "application/json",

@@ -21,7 +21,7 @@ const Order = () => {
       isLoading,
       refetch,
     } = useQuery("orderPart", () =>
-      fetch(`http://localhost:5000/order/${id.id}`, {
+      fetch(`https://fast-temple-50632.herokuapp.com/order/${id.id}`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -36,7 +36,7 @@ const Order = () => {
    
 /**
   useEffect(() => {
-    fetch(`http://localhost:5000/order/${id.id}`)
+    fetch(`https://fast-temple-50632.herokuapp.com/order/${id.id}`)
       .then((res) => res.json())
       .then((data) => setOrderPart(data));
   }, [id]);
@@ -68,7 +68,7 @@ const Order = () => {
       status: "unpaid",
     };
 
-    fetch("http://localhost:5000/myorder", {
+    fetch("https://fast-temple-50632.herokuapp.com/myorder", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -84,7 +84,7 @@ const Order = () => {
 
         if (data.result.insertedId) {
           
-             fetch(`http://localhost:5000/order/${id.id}`, {
+             fetch(`https://fast-temple-50632.herokuapp.com/order/${id.id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

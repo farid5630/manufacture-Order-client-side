@@ -10,7 +10,7 @@ const ManageProduct = () => {
     isLoading,
     refetch,
   } = useQuery("parts", () =>
-    fetch("http://localhost:5000/parts", {
+    fetch("https://fast-temple-50632.herokuapp.com/parts", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
@@ -22,7 +22,7 @@ const ManageProduct = () => {
   }
 
   const handleDelete = (id) => {
-     fetch(`http://localhost:5000/parts/${id}`, {
+     fetch(`https://fast-temple-50632.herokuapp.com/parts/${id}`, {
        method: "DELETE",
        headers: {
          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
