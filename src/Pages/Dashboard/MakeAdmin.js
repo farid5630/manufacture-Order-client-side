@@ -20,7 +20,6 @@ const MakeAdmin = () => {
     if (isLoading) {
       return <Loading></Loading>;
     }
-  console.log(users);
     
     const makeAdmin = (email) => {
         fetch(`http://localhost:5000/user/admin/${email}`, {
@@ -38,9 +37,8 @@ const MakeAdmin = () => {
           })
           .then((data) => {
             if (data.modifiedCount > 0) {
-              toast.success(`Successfully made an admin`);
               refetch();
-              
+              toast.success(`Successfully made an admin`);
             }
           });
   }

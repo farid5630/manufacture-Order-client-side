@@ -31,8 +31,10 @@ const AddProduct = () => {
             description: data.description,
             availabalQuantity: data.availabalQuantity,
             minimumOrder: data.minimumOrder,
+            price:data.price,
             img: img,
           };
+          console.log(part);
             
           // send to your database
           fetch("http://localhost:5000/parts", {
@@ -49,7 +51,7 @@ const AddProduct = () => {
                 toast.success("Parts added successfully");
                 reset();
               } else {
-                toast.error("Failed to add the doctor");
+                toast.error("Failed to add the Parts");
               }
             });
         }

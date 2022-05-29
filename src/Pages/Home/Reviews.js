@@ -1,14 +1,49 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
 
 const Reviews = () => {
+  const {
+    data: reviews,
+    isLoading,
+    refetch,
+  } = useQuery("reviews", () =>
+    fetch("http://localhost:5000/review", {
+      
+    }).then((res) => res.json())
+    );
+  
+
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+  
     return (
       <div className="max-w-7xl mx-auto px-12">
         <h4 className="after-custom text-center mt-16 uppercase text-4xl text-cyan-500">
           testimonials
         </h4>
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-20">
+          {reviews?.slice(0, 6).map((review) => (
+            <div key={review._id} className="flex flex-col items-center">
+              <div className="profile">
+                <img
+                  className="user"
+                  src={review.img}
+                  alt="This is clients imag"
+                />
+              </div>
+              <div className="text-center tesimonial rounded ">
+                <blockquote>{review.description}</blockquote>
+                <p>{review.rating}</p>
+                <h3 className="text-2xl text-cyan-500 font-bold">
+                  {review.name}
+                </h3>
+              </div>
+            </div>
+          ))}
           <div className="flex flex-col items-center">
-            <div className='profile'>
+            <div className="profile">
               {/* <img
                 style={{
                   width: "120px",
@@ -19,14 +54,13 @@ const Reviews = () => {
                 src="https://i.ibb.co/4pRyk89/image.png"
                 alt="This is clients imag"
               /> */}
-               <img
-                
+              <img
                 className="user"
                 src="https://i.ibb.co/4pRyk89/image.png"
                 alt="This is clients imag"
               />
             </div>
-            <div className="text-center tesimonial rounded ">             
+            <div className="text-center tesimonial rounded ">
               <blockquote>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Voluptate, tenetur dolores exercitationem sequi modi est
@@ -39,7 +73,7 @@ const Reviews = () => {
               </h2>
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <div>
               <img src="" alt="This is clients imag" />
             </div>
@@ -55,7 +89,7 @@ const Reviews = () => {
               <h3>content</h3>
               <h3>name</h3>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );

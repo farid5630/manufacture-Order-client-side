@@ -27,7 +27,7 @@ const AddReview = () => {
                   rating:data.rating,
                   img: img,
                   };
-                  console.log(review);
+                 
 
                 // send to your database
                 fetch("http://localhost:5000/review", {

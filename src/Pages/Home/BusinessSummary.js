@@ -3,11 +3,12 @@ import React from "react";
 const business = [
   {
     id: 1,
-    name: "countries",
+    name: "Countries",
     number: 32,
     img: "https://i.ibb.co/4pRyk89/image.png",
   },
   { id: 2, name: "Complete Project", number: "540+", img: "url" },
+  
   { id: 3, name: "Happy Calients", number: "380+", img: "url" },
   { id: 4, name: "Feedbacks", number: "420+", img: "url" },
 ];
